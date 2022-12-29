@@ -18,5 +18,6 @@ public class Main {
 		gameField2 .printField();
 		LinkedList<int[]> revWay = findShortWayClassic.getShortWay();
 		revWay.forEach(System.out::println);
+		
 	}
 }
