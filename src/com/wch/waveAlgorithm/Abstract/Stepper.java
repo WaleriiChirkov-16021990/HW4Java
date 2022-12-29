@@ -1,7 +1,7 @@
 package com.wch.waveAlgorithm.Abstract;
 
 public abstract class Stepper {
-	private int step;
+	private int step = 1;
 	public int getStep() {
 		return step;
 	}

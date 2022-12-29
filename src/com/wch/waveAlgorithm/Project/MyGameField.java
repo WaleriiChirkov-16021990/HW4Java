@@ -50,9 +50,9 @@ public class MyGameField extends Fields implements Fillable {
 		int limit = (getField().length - 2) * (getField()[0].length -2) / 4;
 		for (int i = 0,k = getField().length-1; i < getField().length ; i++) {
 			int first = rnd.nextInt(getField()[i].length * 3/4);
-			int size = rnd.nextInt(getField()[i].length/4);
+			int size = rnd.nextInt(getField()[i].length/5);
 			int second = rnd.nextInt(getField()[i].length/3, getField()[i].length);
-			int sizeSecond = rnd.nextInt(getField()[i].length/4);
+			int sizeSecond = rnd.nextInt(getField()[i].length/5);
 			for (int j = 0; j < getField()[i].length ; j++) {
 				if(limit > 0){
 					if (getField()[i][j] != -1){

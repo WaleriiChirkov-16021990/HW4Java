@@ -3,21 +3,15 @@ package com.wch.waveAlgorithm.Project;
 import com.wch.waveAlgorithm.Abstract.Stepper;
 import com.wch.waveAlgorithm.Interface.WalkingAble;
 
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.Random;
+import java.util.*;
 
 public class ClassicStepper extends Stepper implements WalkingAble {
 	private int[] up;
 	private int[] right;
 	private int[] down;
 	private int[] left;
-	private int[][] Stepper = { {getUp()[0],getUp()[1]},
-								{getRight()[0],getRight()[1]},
-								{getDown()[0],getDown()[1]},
-								{getLeft()[0], getLeft()[1]}
-								};
+	private int[][] Stepper ;
+
 	private MyGameField gameField;
 	
 	private Deque<int[]> deque;
@@ -27,14 +21,24 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 	private int[] startPoint;
 	
 	public ClassicStepper() {
-		setSizeStep(1);
 		setUp(new int[]{-getStep(),0});
 		setRight(new int[]{0,getStep()});
 		setDown(new int[]{getStep(),0});
 		setLeft(new int[]{0,-getStep()});
-		this.deque = (Deque<int[]>) new ArrayList<int[]>();
+		this.deque =  new LinkedList<>();
 		this.memoryPoint = new MemoryPoint();
 		this.dataBase = new DataBase();
+	}
+	
+	public ClassicStepper(MyGameField gameField, MemoryPoint memoryPoint, DataBase dataBase) {
+		this.gameField = gameField;
+		this.memoryPoint = memoryPoint;
+		this.dataBase = dataBase;
+		setUp(new int[]{-getStep(),0});
+		setRight(new int[]{0,getStep()});
+		setDown(new int[]{getStep(),0});
+		setLeft(new int[]{0,-getStep()});
+		this.deque =  new LinkedList<>();
 	}
 	
 	public ClassicStepper(int[] up, int[] right, int[] down, int[] left) {
@@ -43,10 +47,9 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 		this.right = right;
 		this.down = down;
 		this.left = left;
-		this.deque = (Deque<int[]>) new ArrayList<int[]>();
+		this.deque =  new LinkedList<>();
 		this.memoryPoint = new MemoryPoint();
 		this.dataBase = new DataBase();
-		this.setRndStartPoint();
 	}
 	
 	public void setRndStartPoint(int[] startPoint) {
@@ -94,8 +97,6 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 		this.dataBase = dataBase;
 	}
 	
-	
-	
 	public int[] getUp() {
 		return up;
 	}
@@ -142,19 +143,13 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 	public void setSteppers(int[][] newStepper) {
 		if(newStepper == null) this.setSteppers();
 		else {
-			this.getSteppers()[0] = newStepper[0];
-			this.getSteppers()[1] = newStepper[1];
-			this.getSteppers()[2] = newStepper[2];
-			this.getSteppers()[3] = newStepper[3];
+			this.Stepper = newStepper;
 		}
 	}
 	
 	@Override
 	public void setSteppers() {
-		this.getSteppers()[0] = getUp();
-		this.getSteppers()[1] = getRight();
-		this.getSteppers()[2] = getDown();
-		this.getSteppers()[3] = getLeft();
+		this.setSteppers(new int[][]{getUp(),getRight(),getDown(),getLeft()});
 	}
 	
 	public int[] getStartPoint() {
@@ -167,13 +162,16 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 	}
 	public void setRndStartPoint(){
 		Random random = new Random();
+		int size = this.getGameField().getField().length;
+		int size2 = this.getGameField().getField()[0].length;
 		int count = 10000;
 		while (true && count > 0){
-			int rows = random.nextInt(getGameField().getField().length);
-			int columns = random.nextInt(getGameField().getField()[0].length);
+			int rows = random.nextInt(0,size);
+			int columns = random.nextInt(0, size2);
 			if(getGameField().getField()[rows][columns] != -2 &&
 				getGameField().getField()[rows][columns] != -1){
-				this.setRndStartPoint(new int[]{rows,columns});
+				getGameField().getField()[rows][columns] = -88;
+				this.startPoint = new int[]{rows,columns};
 				break;
 			}
 			count--;

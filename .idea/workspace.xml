@@ -4,23 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f813eda-2e67-471d-a48d-708a29e4f138" name="Changes" comment="добавил интерфейс для наполняемых обьектов, с методом наполнение.">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Abstract/Stepper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Interface/Memorable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Interface/WalkingAble.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/AdvanceStepper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/ClassicStepper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/DataBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/FindShortWayClassic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/MemoryPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/Printer.java" afterDir="false" />
+    <list default="true" id="6f813eda-2e67-471d-a48d-708a29e4f138" name="Changes" comment="добавил классы, пока не пробовал запуск, код сырой">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Abstract/Fields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Abstract/Fields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Abstract/Stepper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Abstract/Stepper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/ClassicStepper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/ClassicStepper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/FindShortWayClassic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/FindShortWayClassic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/MemoryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/MemoryPoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/MyGameField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/MyGameField.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,18 +40,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "OverrideImplement.generate.javadoc": "true",
-    "Repository.Attach.Annotations": "true",
-    "Repository.Attach.JavaDocs": "true",
-    "Repository.Attach.Sources": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.wch.waveAlgorithm.Project.Main" />
@@ -97,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672086042957</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="добавил классы, пока не пробовал запуск, код сырой">
+      <created>1672260465342</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672260465342</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,6 +141,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="добавил интерфейс для наполняемых обьектов, с методом наполнение." />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил интерфейс для наполняемых обьектов, с методом наполнение." />
+    <MESSAGE value="добавил классы, пока не пробовал запуск, код сырой" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил классы, пока не пробовал запуск, код сырой" />
   </component>
 </project>

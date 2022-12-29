@@ -32,6 +32,11 @@ public abstract class Fields {
 	public int[][] getField() {
 		return field;
 	}
+	
+	public void setField(int[][] field) {
+		this.field = field;
+	}
+	
 	protected void setNewField(){
 		this.field = new int[getRows()+2][getColumns()+2];
 	}
