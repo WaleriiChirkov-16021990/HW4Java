@@ -35,9 +35,9 @@ public class MyGameField extends Fields implements Fillable {
 	}
 	@Override
 	protected void fillContourField(){
-		for (int i = 0; i < getField().length ; i++) {
-			for (int j = 0; j < getField()[i].length ; j++) {
-				if(i == 0 || i == getField().length - 1 || j == 0 || j == getField()[i].length - 1){
+		for (int i = 0; i < getField().length; i++) {
+			for (int j = 0; j < getField()[i].length; j++) {
+				if (i == 0 || i == getField().length - 1 || j == 0 || j == getField()[i].length - 1) {
 					getField()[i][j] = -1;
 				}
 			}
@@ -47,37 +47,34 @@ public class MyGameField extends Fields implements Fillable {
 	@Override
 	protected void fillGameField() {
 		Random rnd = new Random();
-		int limit = (getField().length - 2) * (getField()[0].length -2) / 4;
-		for (int i = 0,k = getField().length-1; i < getField().length ; i++) {
-			int first = rnd.nextInt(getField()[i].length * 3/4);
-			int size = rnd.nextInt(getField()[i].length/5);
-			int second = rnd.nextInt(getField()[i].length/3, getField()[i].length);
-			int sizeSecond = rnd.nextInt(getField()[i].length/5);
-			for (int j = 0; j < getField()[i].length ; j++) {
-				if(limit > 0){
-					if (getField()[i][j] != -1){
+		int limit = (getField().length - 2) * (getField()[0].length - 2) / 4;
+		for (int i = 0, k = getField().length - 1; i < getField().length; i++) {
+			int first = rnd.nextInt(getField()[i].length * 3 / 4);
+			int size = rnd.nextInt(getField()[i].length / 5);
+			int second = rnd.nextInt(getField()[i].length / 3, getField()[i].length);
+			int sizeSecond = rnd.nextInt(getField()[i].length / 5);
+			for (int j = 0; j < getField()[i].length; j++) {
+				if (limit > 0) {
+					if (getField()[i][j] != -1) {
 						if (j == first) {
 							getField()[i][j] = -1;
 							limit--;
-							getField()[i][getField()[i].length-j] = -1;
+							getField()[i][getField()[i].length - j] = -1;
 							limit--;
-						}
-						else if(j < first+size && j > first) {
+						} else if (j < first + size && j > first) {
 							getField()[i][j] = -1;
 							limit--;
-							getField()[i][getField()[i].length-j] = -1;
+							getField()[i][getField()[i].length - j] = -1;
 							limit--;
-						}
-						else if(j == second) {
+						} else if (j == second) {
 							getField()[i][j] = -1;
 							limit--;
-							getField()[i][getField()[i].length-j] = -1;
+							getField()[i][getField()[i].length - j] = -1;
 							limit--;
-						}
-						else if(j>second && j < second+sizeSecond) {
+						} else if (j > second && j < second + sizeSecond) {
 							getField()[i][j] = -1;
 							limit--;
-							getField()[i][getField()[i].length-j] = -1;
+							getField()[i][getField()[i].length - j] = -1;
 							limit--;
 						}
 					}
@@ -88,19 +85,18 @@ public class MyGameField extends Fields implements Fillable {
 	
 	
 	@Override
-	public void fillingExit(int count) {
-		Random rnd = new Random();
+	public void fillingExit(int count) {Random rnd = new Random();
 		int first;
 		int second;
-		int limit = (getField().length - 2) * (getField()[0].length - 2)/ 9 ;
-		if(count >= limit){
-			count = (getField().length-2) * (getField()[0].length-2) / 10;
-			if(count < 1) count = 1;
+		int limit = (getField().length - 2) * (getField()[0].length - 2) / 9;
+		if (count >= limit) {
+			count = (getField().length - 2) * (getField()[0].length - 2) / 10;
+			if (count < 1) count = 1;
 		}
-		while (count > 0){
+		while (count > 0) {
 			first = rnd.nextInt(getField().length);
 			second = rnd.nextInt(getField().length);
-			if (getField()[first][second] != -1 && getField()[first][second] != -2){
+			if (getField()[first][second] != -1 && getField()[first][second] != -2) {
 				getField()[first][second] = -2;
 				count--;
 			}

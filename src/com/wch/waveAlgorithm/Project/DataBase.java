@@ -1,30 +1,42 @@
 package com.wch.waveAlgorithm.Project;
 
-import java.util.ArrayList;
+import com.wch.waveAlgorithm.Interface.Memorable;
 
-public class DataBase {
-	private ArrayList<MemoryPoint> dataBase;
-	private int[] firstFinish;
+import java.util.HashSet;
+
+public class DataBase implements Memorable<MyGameField> {
+	private HashSet<MyGameField> MapsCollections;
 	
-	public DataBase(ArrayList<MemoryPoint> dataBase) {
-		this.dataBase = dataBase;
+	public DataBase(HashSet<MyGameField> mapsCollections) {
+		MapsCollections = mapsCollections;
 	}
+	
 	public DataBase() {
+		MapsCollections = new HashSet<>();
 	}
 	
-	public ArrayList<MemoryPoint> getDataBase() {
-		return dataBase;
+	public HashSet<MyGameField> getMapsCollections() {
+		return MapsCollections;
 	}
 	
-	public void setDataBase(ArrayList<MemoryPoint> dataBase) {
-		this.dataBase = dataBase;
+	public void setMapsCollections(HashSet<MyGameField> mapsCollections) {
+		MapsCollections = mapsCollections;
 	}
 	
-	public int[] getFirstFinish() {
-		return firstFinish;
+	
+	/**
+	 * @param memories
+	 */
+	@Override
+	public void addMemories(MyGameField memories) {
+		this.MapsCollections.add(memories);
 	}
 	
-	public void setFirstFinish(int[] firstFinish) {
-		this.firstFinish = firstFinish;
+	/**
+	 *
+	 */
+	@Override
+	public void clearMemories() {
+		this.MapsCollections.clear();
 	}
 }

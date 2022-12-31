@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f813eda-2e67-471d-a48d-708a29e4f138" name="Changes" comment="добавил классы, пока не пробовал запуск, код сырой">
+    <list default="true" id="6f813eda-2e67-471d-a48d-708a29e4f138" name="Changes" comment="заполнение работает">
+      <change afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/FindShortWayAdvance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Abstract/Fields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Abstract/Fields.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Abstract/Stepper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Abstract/Stepper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Interface/Fillable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Interface/Fillable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/AdvanceStepper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/AdvanceStepper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/ClassicStepper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/ClassicStepper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/DataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/FindShortWayClassic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/FindShortWayClassic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/MemoryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/MemoryPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/MemoryPoint.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/MyGameField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/MyGameField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/Printer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +33,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -95,7 +104,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672260465342</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="код сырой, но заполнение волной по классике работает.">
+      <created>1672347548124</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672347548124</updated>
+    </task>
+    <task id="LOCAL-00004" summary="заполнение работает">
+      <created>1672347683415</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672347683415</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,6 +165,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="добавил интерфейс для наполняемых обьектов, с методом наполнение." />
     <MESSAGE value="добавил классы, пока не пробовал запуск, код сырой" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил классы, пока не пробовал запуск, код сырой" />
+    <MESSAGE value="код сырой, но заполнение волной по классике работает." />
+    <MESSAGE value="заполнение работает" />
+    <option name="LAST_COMMIT_MESSAGE" value="заполнение работает" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.NoSuchElementException" package="java.util" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

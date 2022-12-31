@@ -11,28 +11,21 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 	private int[] down;
 	private int[] left;
 	private int[][] Stepper ;
-
 	private MyGameField gameField;
-	
 	private Deque<int[]> deque;
-	private MemoryPoint memoryPoint;
 	private DataBase dataBase;
-	
 	private int[] startPoint;
-	
 	public ClassicStepper() {
 		setUp(new int[]{-getStep(),0});
 		setRight(new int[]{0,getStep()});
 		setDown(new int[]{getStep(),0});
 		setLeft(new int[]{0,-getStep()});
 		this.deque =  new LinkedList<>();
-		this.memoryPoint = new MemoryPoint();
 		this.dataBase = new DataBase();
 	}
 	
-	public ClassicStepper(MyGameField gameField, MemoryPoint memoryPoint, DataBase dataBase) {
+	public ClassicStepper(MyGameField gameField, DataBase dataBase) {
 		this.gameField = gameField;
-		this.memoryPoint = memoryPoint;
 		this.dataBase = dataBase;
 		setUp(new int[]{-getStep(),0});
 		setRight(new int[]{0,getStep()});
@@ -48,7 +41,6 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 		this.down = down;
 		this.left = left;
 		this.deque =  new LinkedList<>();
-		this.memoryPoint = new MemoryPoint();
 		this.dataBase = new DataBase();
 	}
 	
@@ -79,14 +71,6 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 	
 	public void setDeque(Deque<int[]> deque) {
 		this.deque = deque;
-	}
-	
-	public MemoryPoint getMemoryPoint() {
-		return memoryPoint;
-	}
-	
-	public void setMemoryPoint(MemoryPoint memoryPoint) {
-		this.memoryPoint = memoryPoint;
 	}
 	
 	public DataBase getDataBase() {
@@ -128,17 +112,14 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 	public void setLeft(int[] left) {
 		this.left = left;
 	}
-	
 	@Override
 	public int[][] getSteppers() {
 		return this.Stepper;
 	}
-	
 	@Override
 	public int getSizeStep() {
 		return super.getStep();
 	}
-	
 	@Override
 	public void setSteppers(int[][] newStepper) {
 		if(newStepper == null) this.setSteppers();
@@ -146,16 +127,13 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 			this.Stepper = newStepper;
 		}
 	}
-	
 	@Override
 	public void setSteppers() {
 		this.setSteppers(new int[][]{getUp(),getRight(),getDown(),getLeft()});
 	}
-	
 	public int[] getStartPoint() {
 		return startPoint;
 	}
-	
 	@Override
 	public void setSizeStep(int size) {
 		super.setStep(size);
@@ -170,7 +148,7 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 			int columns = random.nextInt(0, size2);
 			if(getGameField().getField()[rows][columns] != -2 &&
 				getGameField().getField()[rows][columns] != -1){
-				getGameField().getField()[rows][columns] = -88;
+				getGameField().getField()[rows][columns] = 1;
 				this.startPoint = new int[]{rows,columns};
 				break;
 			}

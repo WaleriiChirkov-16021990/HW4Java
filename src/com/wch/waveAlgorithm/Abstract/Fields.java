@@ -6,8 +6,14 @@ public abstract class Fields {
 	private int[][] field;
 	
 	public Fields(int rows, int columns) {
-		this.rows = rows;
-		this.columns = columns;
+		if(rows > 2 && columns > 2) {
+			this.rows = rows;
+			this.columns = columns;
+		} else {
+			System.out.println("\nВы ввели не корректный размер поля. \nСгенерирован шаблон 10х10.");
+			this.rows = 10;
+			this.columns = 10;
+		}
 	}
 	
 	public Fields() {
