@@ -5,6 +5,13 @@ import com.wch.waveAlgorithm.Interface.WalkingAble;
 
 import java.util.*;
 
+/**
+ *  Класс описывает обьект. который шагает только по классическому представлению волнового алгоритма ( горизонтально или вертикально)
+ *  храня в параметрах коллекцию данных шагов
+ *  экземпляр сгенерированного и заполненого обьектами поля
+ *  прикрепленную базу, для записи или получения ранее сгенерированных полей.
+ *  поле хранения точки старта сканирования(распространения волны)
+ */
 public class ClassicStepper extends Stepper implements WalkingAble {
 	private int[] up;
 	private int[] right;
@@ -12,7 +19,6 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 	private int[] left;
 	private int[][] Stepper ;
 	private MyGameField gameField;
-	private Deque<int[]> deque;
 	private DataBase dataBase;
 	private int[] startPoint;
 	public ClassicStepper() {
@@ -20,7 +26,6 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 		setRight(new int[]{0,getStep()});
 		setDown(new int[]{getStep(),0});
 		setLeft(new int[]{0,-getStep()});
-		this.deque =  new LinkedList<>();
 		this.dataBase = new DataBase();
 	}
 	
@@ -31,7 +36,6 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 		setRight(new int[]{0,getStep()});
 		setDown(new int[]{getStep(),0});
 		setLeft(new int[]{0,-getStep()});
-		this.deque =  new LinkedList<>();
 	}
 	
 	public ClassicStepper(int[] up, int[] right, int[] down, int[] left) {
@@ -40,7 +44,6 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 		this.right = right;
 		this.down = down;
 		this.left = left;
-		this.deque =  new LinkedList<>();
 		this.dataBase = new DataBase();
 	}
 	
@@ -63,14 +66,6 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 	
 	public void setGameField(MyGameField gameField) {
 		this.gameField = gameField;
-	}
-	
-	public Deque<int[]> getDeque() {
-		return deque;
-	}
-	
-	public void setDeque(Deque<int[]> deque) {
-		this.deque = deque;
 	}
 	
 	public DataBase getDataBase() {
@@ -120,6 +115,11 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 	public int getSizeStep() {
 		return super.getStep();
 	}
+	
+	/**
+	 * Метод принимает новый шаблон шагов, в случае если он пуст, сохраняет шаблон по умолчанию.
+	 * @param newStepper
+	 */
 	@Override
 	public void setSteppers(int[][] newStepper) {
 		if(newStepper == null) this.setSteppers();
@@ -127,6 +127,10 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 			this.Stepper = newStepper;
 		}
 	}
+	
+	/**
+	 * Метод задает параметры шаблонов шага, от текущего положения
+	 */
 	@Override
 	public void setSteppers() {
 		this.setSteppers(new int[][]{getUp(),getRight(),getDown(),getLeft()});
@@ -138,6 +142,10 @@ public class ClassicStepper extends Stepper implements WalkingAble {
 	public void setSizeStep(int size) {
 		super.setStep(size);
 	}
+	
+	/**
+	 * Метод генерирует точку старта на полученном поле.
+	 */
 	public void setRndStartPoint(){
 		Random random = new Random();
 		int size = this.getGameField().getField().length;

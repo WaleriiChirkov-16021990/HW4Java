@@ -3,6 +3,9 @@ package com.wch.waveAlgorithm.Project;
 import java.util.Arrays;
 import java.util.LinkedList;
 
+/**
+ * класс вывода данных
+ */
 public class Printer {
 	
 	public void printArrayDouble(LinkedList<int[]> array){
@@ -12,6 +15,10 @@ public class Printer {
 		}
 	}
 	
+	/**
+	 * Вывод поля в консоль, из экземпляра MyGameField
+	 * @param gameField2 - экземпляр MyGameField
+	 */
 	public void printField(MyGameField gameField2) {
 		for (int i = 0; i < gameField2.getField().length ; i++) {
 			for (int j = 0; j < gameField2.getField()[i].length ; j++) {

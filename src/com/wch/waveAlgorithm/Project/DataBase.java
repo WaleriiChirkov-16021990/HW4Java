@@ -4,6 +4,9 @@ import com.wch.waveAlgorithm.Interface.Memorable;
 
 import java.util.HashSet;
 
+/**
+ * Класс сущности, которая сохраняет сгенерированные MyGameField, для дальнешей передачи  , хранения и анализа.
+ */
 public class DataBase implements Memorable<MyGameField> {
 	private HashSet<MyGameField> MapsCollections;
 	
@@ -25,7 +28,8 @@ public class DataBase implements Memorable<MyGameField> {
 	
 	
 	/**
-	 * @param memories
+	 * Данный метод пополняет временную БД.
+	 * @param memories - объект класса MyGameField
 	 */
 	@Override
 	public void addMemories(MyGameField memories) {
@@ -33,7 +37,7 @@ public class DataBase implements Memorable<MyGameField> {
 	}
 	
 	/**
-	 *
+	 * Очистка временной БД
 	 */
 	@Override
 	public void clearMemories() {

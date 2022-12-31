@@ -5,6 +5,9 @@ import com.wch.waveAlgorithm.Interface.Fillable;
 
 import java.util.Random;
 
+/**
+ * Мое поле(карта) имеет определенные размеры, способно наполняться разными объектрами.
+ */
 public class MyGameField extends Fields implements Fillable {
 	
 	public MyGameField(int rows, int columns) {
@@ -23,6 +26,9 @@ public class MyGameField extends Fields implements Fillable {
 		this.fillingExit(1);
 	}
 	
+	/**
+	 * Метод печати поля
+	 */
 	@Override
 	protected void printField() {
 		for (int i = 0; i < getField().length ; i++) {
@@ -33,6 +39,10 @@ public class MyGameField extends Fields implements Fillable {
 		}
 		System.out.println();
 	}
+	
+	/**
+	 * Метод добавления внешнего контура к полю.
+	 */
 	@Override
 	protected void fillContourField(){
 		for (int i = 0; i < getField().length; i++) {
@@ -44,6 +54,9 @@ public class MyGameField extends Fields implements Fillable {
 		}
 	}
 	
+	/**
+	 * Метод заполнения поля преградами, одного характера, в случайном порядке.
+	 */
 	@Override
 	protected void fillGameField() {
 		Random rnd = new Random();
@@ -83,7 +96,10 @@ public class MyGameField extends Fields implements Fillable {
 		}
 	}
 	
-	
+	/**
+	 * Метод заполнения поля случайными точками выхода , характер отличный от преград.
+	 * @param count
+	 */
 	@Override
 	public void fillingExit(int count) {Random rnd = new Random();
 		int first;

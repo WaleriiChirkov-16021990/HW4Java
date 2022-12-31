@@ -4,48 +4,90 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
+/**
+ *
+ */
 public class FindShortWayClassic {
 	private ClassicStepper classicStepper;
 	private LinkedList<int[]> shortWay = new LinkedList<>();
 	private LinkedList<int[]> finish = new LinkedList<>();
 	private int minValue;
 	
+	/**
+	 *
+	 * @return
+	 */
 	public int getMinValue() {
 		return minValue;
 	}
 	
+	/**
+	 *
+	 * @param minValue
+	 */
 	public void setMinValue(int minValue) {
 		this.minValue = minValue;
 	}
 	
+	/**
+	 *
+	 * @param finish
+	 */
 	public void setFinish(LinkedList<int[]> finish) {
 		this.finish = finish;
 	}
 	
+	/**
+	 *
+	 * @return
+	 */
 	public LinkedList<int[]> getFinish() {
 		return finish;
 	}
 	
+	/**
+	 *
+	 * @return
+	 */
 	public LinkedList<int[]> getShortWay() {
 		return shortWay;
 	}
 	
+	/**
+	 *
+	 */
 	public FindShortWayClassic() {
 	}
 	
+	/**
+	 *
+	 * @param classicStepper
+	 */
 	public FindShortWayClassic(ClassicStepper classicStepper) {
 		this.classicStepper = classicStepper;
 	}
 	
+	/**
+	 *
+	 * @return
+	 */
 	public ClassicStepper getClassicStepper() {
 		return classicStepper;
 	}
 	
+	/**
+	 *
+	 * @param classicStepper
+	 */
 	public void setClassicStepper(ClassicStepper classicStepper) {
 		this.classicStepper = classicStepper;
 	}
 	
-	public void  getReverseWay(int @NotNull [] finishe){
+	/**
+	 *Метод нахождения самого короткого пути, методов возврата от финиша к старту
+	 * @param finishe
+	 */
+	public void  getReverseWay(int [] finishe){
 	if(finishe != null) {
 		int[] point = finishe.clone();
 		LinkedList<int[]> shortWay = new LinkedList<>();
@@ -67,6 +109,10 @@ public class FindShortWayClassic {
 		System.out.println("На сгенерированном поле нет способа добраться до выхода из этой точки");
 		}
 	}
+	
+	/**
+	 *Метод классического волнового алгоритма
+	 */
 	public void waveScan(){
 		int count = 2;
 		int[] point;
@@ -84,11 +130,8 @@ public class FindShortWayClassic {
 					if (classicStepper.getGameField().getField()[point[0] + a[0]][point[1] + a[1]] == 0){
 						classicStepper.getGameField().getField()[point[0] + a[0]][point[1] + a[1]] = count;
 						temp.addLast(new int[]{point[0] + a[0],point[1] + a[1]});
-						if (classicStepper.getGameField().getField()[point[0] + a[0]][point[1] + a[1]] == -2){
-							fin.addFirst(new int[]{point[0] + a[0],point[1] + a[1]});
-						}
 					}
-					if (classicStepper.getGameField().getField()[point[0] + a[0]][point[1] + a[1]] ==-2) {
+					else if (classicStepper.getGameField().getField()[point[0] + a[0]][point[1] + a[1]] ==-2) {
 						fin.addFirst(new int[]{point[0] + a[0], point[1] + a[1]});
 						classicStepper.getGameField().getField()[point[0] + a[0]][point[1] + a[1]] = count;
 					}
@@ -107,10 +150,18 @@ public class FindShortWayClassic {
 		this.setFinish(fin);
 	}
 	
+	/**
+	 *
+	 * @param shortWay
+	 */
 	public void setShortWay(LinkedList<int[]> shortWay) {
 		this.shortWay = shortWay;
 	}
 	
+	/**
+	 * метод нахождения минимального значения, вокруг указанной точки на игровом поле
+	 * @param point
+	 */
 	public void getMinItem(int[] point){
 		int min = 0;
 		for (int[] s: classicStepper.getStepper()
@@ -129,6 +180,10 @@ public class FindShortWayClassic {
 		this.setMinValue(min);
 	}
 	
+	/**
+	 *  .toString()
+	 * @return
+	 */
 	@Override
 	public String toString() {
 		return "FindShortWayClassic{" +

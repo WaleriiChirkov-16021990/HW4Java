@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f813eda-2e67-471d-a48d-708a29e4f138" name="Changes" comment="заполнение работает">
-      <change afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/FindShortWayAdvance.java" afterDir="false" />
+    <list default="true" id="6f813eda-2e67-471d-a48d-708a29e4f138" name="Changes" comment="волновой классический алгоритм работает">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Abstract/Fields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Abstract/Fields.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Interface/Fillable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Interface/Fillable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Interface/Memorable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Interface/Memorable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/AdvanceStepper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/AdvanceStepper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/ClassicStepper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/ClassicStepper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/FindShortWayAdvance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/FindShortWayAdvance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/FindShortWayClassic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/FindShortWayClassic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/MemoryPoint.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/MyGameField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/MyGameField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/Printer.java" afterDir="false" />
     </list>
@@ -118,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672347683415</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="волновой классический алгоритм работает">
+      <created>1672479461399</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672479461399</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,7 +173,8 @@
     <MESSAGE value="добавил классы, пока не пробовал запуск, код сырой" />
     <MESSAGE value="код сырой, но заполнение волной по классике работает." />
     <MESSAGE value="заполнение работает" />
-    <option name="LAST_COMMIT_MESSAGE" value="заполнение работает" />
+    <MESSAGE value="волновой классический алгоритм работает" />
+    <option name="LAST_COMMIT_MESSAGE" value="волновой классический алгоритм работает" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
