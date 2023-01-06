@@ -3,13 +3,12 @@ package com.wch.waveAlgorithm.Project;
 import com.wch.waveAlgorithm.Abstract.Stepper;
 import com.wch.waveAlgorithm.Interface.WalkingAble;
 
-//готовлю реализацию, в задании была только классика.
 
 import java.util.Deque;
 import java.util.Random;
 
 /**
- *
+ * Класс продвинутых сканеров волнового алгоритма (8 направлений распространения волны)
  */
 public class AdvanceStepper extends Stepper implements WalkingAble {
 	private MyGameField gameField;
@@ -162,7 +161,7 @@ public class AdvanceStepper extends Stepper implements WalkingAble {
 	}
 	
 	/**
-	 *
+	 * Метод определяет точку начала сканирования случайным образом.
 	 */
 	public void setRndStartPoint(){
 		Random random = new Random();
@@ -181,9 +180,4 @@ public class AdvanceStepper extends Stepper implements WalkingAble {
 			count--;
 		}
 	}
-	
-	
-	
-	
-	//готовлю реализацию, в задании была только классика.
 }

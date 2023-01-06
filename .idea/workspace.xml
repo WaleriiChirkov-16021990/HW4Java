@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f813eda-2e67-471d-a48d-708a29e4f138" name="Changes" comment="волновой классический алгоритм работает">
+    <list default="true" id="6f813eda-2e67-471d-a48d-708a29e4f138" name="Changes" comment="волновой классический алгоритм работает отлично">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Abstract/Fields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Abstract/Fields.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Interface/Memorable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Interface/Memorable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/AdvanceStepper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/AdvanceStepper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/ClassicStepper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/ClassicStepper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/DataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/FindShortWayAdvance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/FindShortWayAdvance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/FindShortWayClassic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/FindShortWayClassic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/MyGameField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/MyGameField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/waveAlgorithm/Project/Printer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672479461399</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="волновой классический алгоритм работает отлично">
+      <created>1672488745166</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672488745166</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,7 +176,8 @@
     <MESSAGE value="код сырой, но заполнение волной по классике работает." />
     <MESSAGE value="заполнение работает" />
     <MESSAGE value="волновой классический алгоритм работает" />
-    <option name="LAST_COMMIT_MESSAGE" value="волновой классический алгоритм работает" />
+    <MESSAGE value="волновой классический алгоритм работает отлично" />
+    <option name="LAST_COMMIT_MESSAGE" value="волновой классический алгоритм работает отлично" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -185,5 +188,10 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.wch.waveAlgorithm.Project.MyGameField" memberName="field" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

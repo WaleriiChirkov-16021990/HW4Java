@@ -9,33 +9,37 @@ public class Main {
 		classicStepper.setSteppers();
 		classicStepper.setDataBase(dataBase);
 		classicStepper.getDataBase().getMapsCollections().add(classicStepper.getGameField()); // добавляем сненерированное поле, из классического степпера в БД
-		System.out.println("\nСгенерированное игровое поле: \n0 - пустые поля \n-1 - преграда \n-2 - выходы-порталы \n1- точка старта");
+		new Printer().getInfo();
 		new Printer().printField(gameField2);
 		FindShortWayClassic findShortWayClassic = new FindShortWayClassic();
 		findShortWayClassic.setClassicStepper(classicStepper);
 		findShortWayClassic.waveScan(); // запускаем волновой алгоритм
-		System.out.println("Поле отсканированное волновым алгоритмом");
+		Printer.classicFieldFill();
 		new Printer().printField(gameField2);
 		findShortWayClassic.getReverseWay(findShortWayClassic.getFinish().peekFirst());  //ищем обратный путь от первого найденного выхода
 		if(findShortWayClassic.getShortWay().size() >= 1) {
-			System.out.println("Путь от точки старта до точки ближайшего выхода.");
+			Printer.NotEmptyClassic();
 			new Printer().printArrayDouble(findShortWayClassic.getShortWay());  //если путь найдем, печатаем его по точкам
 		}
 		
-//		        Ниже код для моего будущего продвинутого сканирования, пока в разработке.
-//		MyGameField gameField = new MyGameField(10, 10);
-//		AdvanceStepper advanceStepper = new AdvanceStepper(gameField, dataBase);
-//		advanceStepper.setRndStartPoint();
-//		advanceStepper.setSteppers();
-//		advanceStepper.setDataBase(dataBase);
-//		advanceStepper.getDataBase().getMapsCollections().add(classicStepper.getGameField());
-//		System.out.println("\nСгенерированное игровое поле: \n0 - пустые поля \n-1 - преграда \n-2 - выходы-порталы \n1- точка старта");
-//		new Printer().printField(gameField);
-//		FindShortWayAdvance findShortWayAdvance = new FindShortWayAdvance();
-//		findShortWayAdvance.setAdvanceStepper(advanceStepper);
-//		findShortWayAdvance.advanceWaveScan();
-//		System.out.println("Поле отсканированное волновым алгоритмом");
-//		new Printer().printField(gameField);
-		
+
+		MyGameField gameField = new MyGameField(10, 10);
+		AdvanceStepper advanceStepper = new AdvanceStepper(gameField, dataBase);
+		advanceStepper.setRndStartPoint();
+		advanceStepper.setSteppers();
+		advanceStepper.setDataBase(dataBase);
+		advanceStepper.getDataBase().getMapsCollections().add(classicStepper.getGameField());
+		new Printer().getInfo();
+		new Printer().printField(gameField);
+		FindShortWayAdvance findShortWayAdvance = new FindShortWayAdvance();
+		findShortWayAdvance.setAdvanceStepper(advanceStepper);
+		findShortWayAdvance.advanceWaveScan(); // запускаем продвинутутое сканирование волновым алгоритмом
+		Printer.advanceFieldFill();
+		new Printer().printField(gameField);
+		findShortWayAdvance.getReverseWay(findShortWayAdvance.getFinish().peekFirst());  //ищем обратный путь от первого найденного выхода
+		if(findShortWayAdvance.getShortWay().size() >= 1) {
+			Printer.NotEmptyAdvance();
+			new Printer().printArrayDouble(findShortWayAdvance.getShortWay());  //если путь найдем, печатаем его по точкам
+		}
 	}
 }

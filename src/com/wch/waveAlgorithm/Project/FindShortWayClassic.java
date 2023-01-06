@@ -121,8 +121,7 @@ public class FindShortWayClassic {
 		int[] start = classicStepper.getStartPoint();
 		Deque<int[]> points = new LinkedList<>();
 		points.push(start);
-		boolean flag = true;
-		while (flag && count < 600){
+		while (true){
 			while (!points.isEmpty()){
 				point = points.pollFirst();
 				for (int[] a: classicStepper.getStepper()
